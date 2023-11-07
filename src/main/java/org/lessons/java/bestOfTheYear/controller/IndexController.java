@@ -29,5 +29,9 @@ public class IndexController {
 
     private List<String> getBestMovies() {
         List<String> bestMovies = new ArrayList<>();
+        bestMovies.add("Avengers: Endgame");
+        bestMovies.add("Avengers: Infinity War");
+        bestMovies.add("Avengers");
+        return bestMovies;
     }
 }
