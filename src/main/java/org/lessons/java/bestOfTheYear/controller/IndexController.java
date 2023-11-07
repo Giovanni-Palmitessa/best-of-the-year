@@ -53,4 +53,13 @@ public class IndexController {
         model.addAttribute("getBestMovies", moviesString);
         return "movies";
     }
+
+    // songs
+    @GetMapping("songs")
+    public String songs(Model model){
+        List<String> bestSongs = getBestSongs();
+        String songsString = String.join(", ", bestSongs );
+        model.addAttribute("getBestSongs", songsString);
+        return "songs";
+    }
 }
