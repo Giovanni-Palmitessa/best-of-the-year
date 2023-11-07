@@ -45,7 +45,7 @@ public class IndexController {
         return bestSongs;
     }
 
-    // movies
+    // movies.html
     @GetMapping("movies")
     public String movies(Model model){
         List<String> bestMovies = getBestMovies();
