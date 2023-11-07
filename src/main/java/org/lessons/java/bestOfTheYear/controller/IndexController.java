@@ -27,11 +27,29 @@ public class IndexController {
         return "home-page";
     }
 
+    // get Movies
     private List<String> getBestMovies() {
         List<String> bestMovies = new ArrayList<>();
         bestMovies.add("Avengers: Endgame");
         bestMovies.add("Avengers: Infinity War");
         bestMovies.add("Avengers");
         return bestMovies;
+    }
+
+    // get Songs
+    private List<String> getBestSongs() {
+        List<String> bestSongs = new ArrayList<>();
+        bestSongs.add("Bad Bunny - La Jumpa");
+        bestSongs.add("Rick Astley - Never Gonna Give You Up");
+        bestSongs.add("Bello Figo Gu - Pasta con tonno");
+        return bestSongs;
+    }
+
+    // movies
+    @GetMapping("movies")
+    public String movies(Model model){
+        List<String> bestMovies = getBestMovies();
+        String moviesString = String.join(", ", bestMovies );
+
     }
 }
