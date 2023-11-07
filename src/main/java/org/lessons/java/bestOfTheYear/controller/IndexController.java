@@ -50,6 +50,7 @@ public class IndexController {
     public String movies(Model model){
         List<String> bestMovies = getBestMovies();
         String moviesString = String.join(", ", bestMovies );
-
+        model.addAttribute("getBestMovies", moviesString);
+        return "movies";
     }
 }
