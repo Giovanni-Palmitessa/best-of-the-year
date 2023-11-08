@@ -1,5 +1,6 @@
 package org.lessons.java.bestOfTheYear.controller;
 
+import org.lessons.java.bestOfTheYear.model.Movie;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -28,12 +30,9 @@ public class IndexController {
     }
 
     // get Movies
-    private List<String> getBestMovies() {
-        List<String> bestMovies = new ArrayList<>();
-        bestMovies.add("Avengers: Endgame");
-        bestMovies.add("Avengers: Infinity War");
-        bestMovies.add("Avengers");
-        return bestMovies;
+    private List<Movie> getBestMovies() {
+        Movie[] bestMoviesArray = {new Movie(1, "Avengers: Endgame"), new Movie(2, "Avengers: Infinity War"), new Movie(3, "Avengers")};
+        return Arrays.asList(bestMoviesArray);
     }
 
     // get Songs
@@ -48,9 +47,8 @@ public class IndexController {
     // movies.html
     @GetMapping("movies")
     public String movies(Model model){
-        List<String> bestMovies = getBestMovies();
-        String moviesString = String.join(", ", bestMovies );
-        model.addAttribute("getBestMovies", moviesString);
+        List<Movie> bestMoviesArray = getBestMovies();
+        model.addAttribute("getBestMovies", bestMoviesArray);
         return "movies";
     }
 
