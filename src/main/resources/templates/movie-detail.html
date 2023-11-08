@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Movie Detail</title>
-</head>
+<head th:insert="/fragments/resources :: headResources('Movie Detail')"></head>
 <body>
     <div class="container">
-        <h1>Dettagli film!</h1>
+        <h1 class="text-danger">Dettagli film!</h1>
         <div th:if="${movie != null}">
             <p th:text="|ID: ${movie.id}|"></p>
             <p th:text="|Title: ${movie.title}|"></p>
@@ -16,5 +13,7 @@
         </div>
         <a th:href="@{/movies}">Torna alla lista dei film</a>
     </div>
+
+    <th:block th:replace="/fragments/resources :: jsResources"></th:block>
 </body>
 </html>
