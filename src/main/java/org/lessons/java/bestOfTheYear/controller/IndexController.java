@@ -54,6 +54,17 @@ public class IndexController {
         return null;
     }
 
+    // get Song id
+    private Song getSongById(String id) {
+
+        for (Song song : getBestSongs()) {
+            if (song.getId().equals(id)) {
+                return song;
+            }
+        }
+        return null;
+    }
+
     // movies.html
     @GetMapping("/movies")
     public String movies(Model model){
@@ -77,4 +88,6 @@ public class IndexController {
         model.addAttribute("movie", movie);
         return "movie-detail";
     }
+
+
 }
