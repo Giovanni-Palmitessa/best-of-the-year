@@ -2,17 +2,17 @@ package org.lessons.java.bestOfTheYear.model;
 
 public class Movie {
     // Attributi
-    private int id;
+    private String id;
     private String title;
 
     // Costruttori
-    public Movie(int id, String title) {
+    public Movie(String id, String title) {
         this.id = id;
         this.title = title;
     }
     // Getter
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
