@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:insert="/fragments/resources :: headResources('Song Detail')"></head>
+<head th:insert="~{/fragments/resources :: headResources('Song Detail')}"></head>
 <body>
 <div class="container">
     <h1 class="text-danger">Dettagli canzoni!</h1>
@@ -13,6 +13,6 @@
     </div>
     <a th:href="@{/songs}">Torna alla lista delle canzoni!</a>
 </div>
-<th:block th:replace="/fragments/resources :: jsResources"></th:block>
+<th:block th:replace="~{/fragments/resources :: jsResources}"></th:block>
 </body>
 </html>
