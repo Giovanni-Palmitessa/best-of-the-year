@@ -10,9 +10,6 @@ public class Movie {
         this.id = id;
         this.title = title;
     }
-
-    public Movie() {
-    }
     // Getter
 
     public int getId() {
