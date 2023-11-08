@@ -1,6 +1,7 @@
 package org.lessons.java.bestOfTheYear.controller;
 
 import org.lessons.java.bestOfTheYear.model.Movie;
+import org.lessons.java.bestOfTheYear.model.Song;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,12 +37,9 @@ public class IndexController {
     }
 
     // get Songs
-    private List<String> getBestSongs() {
-        List<String> bestSongs = new ArrayList<>();
-        bestSongs.add("Bad Bunny - La Jumpa");
-        bestSongs.add("Rick Astley - Never Gonna Give You Up");
-        bestSongs.add("Bello Figo Gu - Pasta con tonno");
-        return bestSongs;
+    private List<Song> getBestSongs() {
+        Song[] bestSongsArray = {new Song(4, "Bad Bunny - La Jumpa"), new Song(5, "Rick Astley - Never Gonna Give You Up"), new Song(6, "Bello Figo Gu - Pasta con tonno")};
+        return Arrays.asList(bestSongsArray);
     }
 
     // movies.html
