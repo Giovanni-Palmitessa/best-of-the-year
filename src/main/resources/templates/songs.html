@@ -11,9 +11,11 @@
     <h1>Best Songs of the year</h1>
     <ul>
       <li th:each="song : ${getBestSongs}">
-        <span th:text="${song.id}"></span>
-        <span> - </span>
-        <span th:text="${song.title}"></span>
+          <a th:href="@{|/songs/${song.id}|}">
+            <span th:text="${song.id}"></span>
+            <span> - </span>
+            <span th:text="${song.title}"></span>
+          </a>
       </li>
     </ul>
 </body>
