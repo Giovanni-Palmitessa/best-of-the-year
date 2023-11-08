@@ -89,5 +89,11 @@ public class IndexController {
         return "movie-detail";
     }
 
-
+    // song-detail.html
+    @GetMapping("/songs/{id}") // students/123
+    public String songDetail(@PathVariable("id") String songId, Model model) {
+        Song song = getSongById(songId);
+        model.addAttribute("song", song);
+        return "song-detail";
+    }
 }
