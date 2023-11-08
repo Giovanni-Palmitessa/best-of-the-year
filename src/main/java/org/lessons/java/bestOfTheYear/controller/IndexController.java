@@ -71,7 +71,7 @@ public class IndexController {
     }
 
     // movie-detail.html
-    @GetMapping("/movies/{code}") // students/123
+    @GetMapping("/movies/{id}") // students/123
     public String movieDetail(@PathVariable("id") String movieId, Model model) {
         Movie movie = getMovieById(movieId);
         model.addAttribute("movie", movie);
