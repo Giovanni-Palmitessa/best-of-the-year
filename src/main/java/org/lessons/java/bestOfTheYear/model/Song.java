@@ -11,5 +11,12 @@ public class Song {
         this.title = title;
     }
 
+    // Getter
+    public int getId() {
+        return id;
+    }
 
+    public String getTitle() {
+        return title;
+    }
 }
