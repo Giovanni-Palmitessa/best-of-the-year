@@ -6,6 +6,14 @@
 
   <h1 th:text="|Best of the year by ${myName}|"></h1>
 
+  <div class="d-flex justify-content-center align-items-center">
+    <img th:src="@{/2023.jpg}" alt="2023">
+  </div>
+
+  <div class="text-center">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem blanditiis dolore eius eos maiores, nesciunt nobis non nulla odit quam recusandae repellendus vitae voluptates. Adipisci deserunt illum officia officiis optio.
+  </div>
+
   <th:block th:replace="~{/fragments/resources :: jsResources}"></th:block>
 </body>
 </html>
