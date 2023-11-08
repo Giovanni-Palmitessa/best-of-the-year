@@ -10,11 +10,14 @@
 <body>
 <h1>Best Movies of the year are:</h1>
 <ul>
-  <li th:each="movie : ${getBestMovies}">
-<!-- metodi diversi di scrivere la stessa cosa
-  <span th:text="${movie.id + '- ' + movie.title}"></span> -->
-    <span th:text="|${movie.id} - ${movie.title}|"></span>
-  </li>
+    <li th:each="movie : ${getBestMovies}">
+      <a th:href="@{|/movies/${movie.id}|}">
+      <!-- metodi diversi di scrivere la stessa cosa
+        <span th:text="${movie.id + '- ' + movie.title}"></span> -->
+      <span th:text="|${movie.id} - ${movie.title}|"></span>
+      </a>
+    </li>
 </ul>
+<!--<div th:unless="${getBestMovies.size() > 0}">No results</div>-->
 </body>
 </html>
