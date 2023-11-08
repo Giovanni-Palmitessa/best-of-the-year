@@ -11,6 +11,8 @@ public class Movie {
         this.title = title;
     }
 
+    public Movie() {
+    }
     // Getter
 
     public int getId() {
