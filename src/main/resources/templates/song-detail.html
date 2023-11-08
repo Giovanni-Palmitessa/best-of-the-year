@@ -3,7 +3,7 @@
 <head th:insert="/fragments/resources :: headResources('Song Detail')"></head>
 <body>
 <div class="container">
-    <h1>Dettagli canzoni!</h1>
+    <h1 class="text-danger">Dettagli canzoni!</h1>
     <div th:if="${song != null}">
         <p th:text="|ID: ${song.id}|"></p>
         <p th:text="|Title: ${song.title}|"></p>
