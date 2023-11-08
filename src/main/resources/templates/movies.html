@@ -8,6 +8,13 @@
   <title>Movies</title>
 </head>
 <body>
-<h1 th:text="|Best movies of the year are: ${getBestMovies}|"></h1>
+<h1>Best Movies of the year are:</h1>
+<ul>
+  <li th:each="movie : ${getBestMovies}">
+<!-- metodi diversi di scrivere la stessa cosa
+  <span th:text="${movie.id + '- ' + movie.title}"></span> -->
+    <span th:text="|${movie.id} - ${movie.title}|"></span>
+  </li>
+</ul>
 </body>
 </html>
