@@ -2,6 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:insert="~{/fragments/resources :: headResources('Movies')}"></head>
 <body>
+<nav th:replace="~{/fragments/navbar :: topNavbar('movies')}"></nav>
+
 <h1>Best Movies of the year are:</h1>
 <ul>
     <li th:each="movie : ${getBestMovies}">
