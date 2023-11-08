@@ -6,13 +6,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Dettaglio film!</h1>
+        <h1>Dettagli film!</h1>
         <div th:if="${movie != null}">
             <p th:text="|ID: ${movie.id}|"></p>
             <p th:text="|Title: ${movie.title}|"></p>
         </div>
         <div th:if="${movie == null}">
-            Unable to find student
+            Impossibile trovare il film!
         </div>
         <a th:href="@{/movies}">Torna alla lista dei film</a>
     </div>
