@@ -2,9 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:insert="~{/fragments/resources :: headResources('Home')}"></head>
 <body>
-  <h1 th:text="|Best of the year by ${myName}|"></h1>
-
   <nav th:replace="~{/fragments/navbar :: topNavbar('home')}"></nav>
+
+  <h1 th:text="|Best of the year by ${myName}|"></h1>
 
   <th:block th:replace="~{/fragments/resources :: jsResources}"></th:block>
 </body>
